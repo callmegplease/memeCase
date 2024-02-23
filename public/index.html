@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogRandom</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- criando o header-->
+    <header>
+        <h2 class="textprinci">De Reload e veja uma nova raça de cachorro!</h2>
+    </header>
+
+    <!-- criando o container para exibir as imagens de cachorro -->
+    <section>
+        <div class="container">
+            <img class="dogphoto" id="dogImage" src="http://lorempixel.com.br/500/400/?1" alt="Random Dog Image" width="500px" height="400px">
+        </div>
+    </section>
+
+    <script>
+        // Função para carregar uma nova imagem de cachorro
+        function loadRandomDog() {
+            fetch('http://localhost:3000/random-dog') // Solicita uma imagem de cachorro ao servidor
+                .then(response => response.json()) // Converte a resposta para JSON
+                .then(data => {
+                    const dogImage = document.getElementById('dogImage'); // Obtém a referência para a imagem
+                    dogImage.src = data.message; // Define a URL da imagem na tag <img>
+                })
+                .catch(error => console.error('Erro ao buscar imagem de cachorro:', error));
+        }
+
+        // Chama a função para carregar uma nova imagem de cachorro quando a página for carregada
+        window.onload = loadRandomDog;
+    </script>
+
+
+
+    <footer>
+        <h1 class="hh">!Real G fazendo magia!</h1>
+
+        <h4 class="ah">(ajuda do mago giovanni)</h4>
+    </footer>
+
+</body>
+</html>

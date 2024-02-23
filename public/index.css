@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    background-color: #F2EBDF;
+    padding: 20px;
+}
+
+.textprinci {
+    font-size: 24px;
+    text-align: center;
+    color: #A61717;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 480px;
+    width: 550px;
+    border: 2px solid black;
+    display:flex;
+    margin-left: 35%;
+    
+}
+
+
+.dogphoto{
+    margin: 0 auto;
+    margin-top:5% ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.hh{
+    font-size: 20px;
+    text-align: center;
+    color: #A61717;
+    margin-top: 20px;
+
+
+}
+
+.ah{
+    font-size: 20px;
+    text-align: center;
+    color: #A61717;
+    margin-top: 20px;
+
+
+}
